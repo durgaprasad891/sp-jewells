@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SP Jewels | Live Gold & Silver Prices</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #FFD700, #C0C0C0);
+      color: #000;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+
+    }
+    .price-ticker {
+      width: 100%;
+      overflow: hidden;
+      background: #FFD700;
+      color: #000;
+      font-weight: bold;
+      font-family: 'Segoe UI', sans-serif;
+      border-bottom: 2px solid #C0C0C0;
+      white-space: nowrap;
+      box-sizing: border-box;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .ticker-content {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 20s linear infinite;
+    }
+    .ticker-content span {
+      margin-right: 50px;
+      user-select: none;
+    }
+    @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    nav {
+      background: #111;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: inline-block;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    nav a:hover {
+      background: #FFD700;
+      color: #000;
+    }
+    section {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .product-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .product {
+      width: 250px;
+      margin: 20px;
+      border: 1px solid #0a0000;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      background-color: #f0eeee;
+      backdrop-filter: sepia(90%);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .product:hover {
+      transform: perspective(600px) rotateX(10deg) rotateY(10deg) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    .tagline {
+      font-style: italic;
+      color: #555;
+    }
+    a {
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+
+    <h1>SP Jewels</h1>
+    <p class="tagline">Pure Shine, Perfect Style</p>
+  </header>
+
+  <div class="price-ticker">
+    <div class="ticker-content" id="tickerContent">
+      Loading prices...
+    </div>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to SP Jewels</h2>
+    <p>
+      Discover handcrafted Gold and Silver ornaments, Payals, and custom jewellery made to tell your story.<br />
+      చేతితో రూపొందించిన బంగారం మరియు వెండి ఆభరణాలు, పాయల్స్ మరియు మీ కథను చెప్పే ప్రత్యేక ఆభరణాలను కనుగొనండి.
+    </p>
+  </section>
+
+  <section id="products">
+    <h2>Our Collections</h2>
+    <div class="product-section">
+      <div class="product">
+        <img src="neckles.jpg" alt="Gold Necklace" />
+        <h3>Gold Necklace</h3>
+        <p>Pure gold crafted with elegance.</p>
+      </div>
+      <div class="product">
+        <img src="payal.jpg" alt="Silver Payal" />
+        <h3>Silver Payal</h3>
+        <p>Beautifully designed traditional anklets.</p>
+      </div>
+      <div class="product">
+        <img src="earring.jpg" alt="Custom Ear Rings" />
+        <h3>Custom Ear Rings</h3>
+        <p>Made to order, with your story in every piece.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About SP Jewels</h2>
+    <p>
+      Welcome to <strong>SP Jewels</strong>, the online identity of <strong>Sri Venkata Satya Jewellers (SVS Jewels)</strong> — your trusted destination for premium Gold and Silver ornaments. We’ve proudly served our customers with elegance and honesty from our store in Rajamahendravaram, and now we bring that same trust to the digital world.
+    </p>
+    <p>
+      💎 SP Jewels represents our modern, online presence — making it easier for you to browse, inquire, and order your favorite jewellery right from home. From pure gold chains and bridal sets to silver payals and accessories, we craft each piece with love and legacy.
+    </p>
+    <p>
+      ✨ Our <strong>silver payals</strong> are known for their elegant designs and lasting shine — perfect for every step you take. A graceful blend of tradition and charm, they add rhythm to every celebration.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>
+      📍 Location: 32-1-83/2, KVR Swamy Rd, Mangalavaripeta, Rajamahendravaram, Andhra Pradesh 533101, India<br />
+      📞 Phone: +91-8919988419<br />
+      📧 Email: <a href="mailto:spjewells@gmail.com">spjewells@gmail.com</a><br />
+      📷 Instagram: <a href="https://instagram.com/sp_jewells_" target="_blank" rel="noopener">@sp_jewells_</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SP Jewels. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const tickerContent = document.getElementById('tickerContent');
+    const API_KEY = 'goldapi-4ai588smbjsh3j4-io';
+
+    async function fetchPrices() {
+      try {
+        const goldResponse = await fetch('https://www.goldapi.io/api/XAU/INR', {
+          headers: {
+            'x-access-token': API_KEY,
+            'Content-Type': 'application/json'
+          }
+        });
+        const silverResponse = await fetch('https://www.goldapi.io/api/XAG/INR', {
+          headers: {
+            'x-access-token': API_KEY,
+            'Content-Type': 'application/json'
+          }
+        });
+
+        if (!goldResponse.ok || !silverResponse.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const goldData = await goldResponse.json();
+        const silverData = await silverResponse.json();
+
+        const goldPricePerOunce = goldData.price;
+        const silverPricePerOunce = silverData.price;
+
+        // Convert troy ounce to gram (1 troy ounce = 31.1035 grams)
+        const goldPricePerGram = (goldPricePerOunce / 31.1035).toFixed(2);
+        const silverPricePerGram = (silverPricePerOunce / 31.1035).toFixed(2);
+
+        // Prepare the ticker text (repeat twice for smooth loop)
+        const tickerText = `
+          <span>Gold Price: ₹${goldPricePerGram} / gram</span>
+          <span>Silver Price: ₹${silverPricePerGram} / gram</span>
+          <span>Gold Price: ₹${goldPricePerGram} / gram</span>
+          <span>Silver Price: ₹${silverPricePerGram} / gram</span>
+        `;
+
+        tickerContent.innerHTML = tickerText;
+      } catch (error) {
+        console.error('Error fetching metal prices:', error);
+        tickerContent.innerHTML = 'Error loading prices';
+      }
+    }
+
+    fetchPrices();
+    setInterval(fetchPrices, 15 * 60 * 1000); // refresh every 15 mins
+  </script>
+</body>
+</html>
